@@ -626,4 +626,3 @@ SELECT * FROM sales_today
 UNION ALL 
 SELECT * FROM sales_target
   
-  
