@@ -24,6 +24,8 @@ CREATE TABLE IF NOT EXISTS channels (
 );
 
 
+
+
 CREATE TABLE IF NOT EXISTS purchase_history AS (
     customer_id INTEGER,
     product_sku INTEGER,
@@ -48,3 +50,9 @@ CREATE TABLE IF NOT EXISTS visit_history AS (
     FOREIGN_KEY(channel_id) REFERENCES channels(channel_id),
     FOREIGN_KEY(customer_id) REFERENCES customers(customer_id)
 );
+
+{{ config(materialized = 'table') }}
+
+SELECT 
+    SUM(orders.revenue) AS total_revenue
+FROM {{ ref('orders') }} AS orders
