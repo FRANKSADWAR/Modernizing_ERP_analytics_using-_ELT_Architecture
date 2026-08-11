@@ -27,5 +27,15 @@ END
     )
 }}
 
-WITH book_counts AS (
+WITH books_counts AS (
+    SELECT 
+        author_id,
+        COUNT(*) AS total_books
+    FROM {{ ref('int_book_authors') }}
+    GROUP BY author_id
 )
+SELECT
+    author_id,
+    total_books
+
+FROM books_counts
