@@ -18,3 +18,14 @@ BEGIN
     INSERT INTO target_table
     SELECT * FROM #temp_table;
 END
+
+{{
+    config(
+        materialized = 'table',
+        unique_key = 'author_id',
+        sort = 'author_id
+    )
+}}
+
+WITH book_counts AS (
+)
