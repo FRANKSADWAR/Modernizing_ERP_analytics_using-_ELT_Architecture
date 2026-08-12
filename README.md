@@ -12,4 +12,4 @@ into optimized datawarehouse. By spliting the OLTP and OLAP functions, we are ab
 effectively without affecting the OLAP functions.
 
 ## Architecture Overview
-![Architecture diagram](images/ERP Analytics Architecture diagram.jpg)
+![Architecture-diagram](images/Architecture_diagram.jpg)
