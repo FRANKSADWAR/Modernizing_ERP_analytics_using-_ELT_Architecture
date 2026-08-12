@@ -13,6 +13,9 @@ effectively without affecting the OLAP functions.
 
 ## Architecture Overview
 
+---
+id: d06aa9bf-e47a-4d28-ae68-c061a1c1bf54
+---
 flowchart TD
     subgraph VPS["Linux Virtual Private Server (Bare-Metal / Systemd)"]
         
