@@ -1,6 +1,12 @@
-# Data Analytics for Business - an ERP Use case
-ERP systems are massive, they have mostly over 1000 tables intertwined and inter-dependent.
-ERPNext is not an exception to this complexity.
+# Modernizing ERP analytics using ELT Architecture
+
+## Overview
+ERP systems are massive, they have mostly over 1000 tables intertwined and inter-dependent. ERPNext is not an exception to this.
+As the volume of transactions continue to grow from hundreds of thousands or rows to millions of rows, direct BI connection to the operational database becomes leads to performance and limited scalability.
+The increasing volume 
+
+Furthermore, operational databases such as MariaDB (MySQL) used by ERPNext is mean for OLTP functions and not optimized for OLAP functions.
+
 
 I am particularly interested in working with ERPNext
 given that its fully open-source. I am actively involved in the transformation and digitization 
