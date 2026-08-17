@@ -13,3 +13,16 @@ effectively without affecting the OLAP functions.
 
 ## Architecture Overview
 ![Architecture-diagram](images/Architecture_diagram.jpg)
+
+
+## Project setup
+Installing pip, virtual env, postgreSQL and MariaDB dependencies
+
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+```
+sudo apt install -y python3 python3-venv python3-pip python3-dev build-essential lipq-dev default-libmysqlclient-dev pkg-config curl wget git
+```
+
