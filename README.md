@@ -16,6 +16,9 @@ effectively without affecting the OLAP functions.
 
 
 ## Project setup
+#### Prerequisites
+This architecture has been setup in an Ubuntu 24.04 server, hosted in Contabo VPS [200GB SSD, 12GB RAM], with 250GB Object storage from Contabo.
+
 Installing pip, virtual env, postgreSQL and MariaDB dependencies
 
 ```
@@ -24,5 +27,34 @@ sudo apt update && sudo apt upgrade -y
 
 ```
 sudo apt install -y python3 python3-venv python3-pip python3-dev build-essential lipq-dev default-libmysqlclient-dev pkg-config curl wget git
+```
+
+#### Setup PostgreSQL
+```
+sudo apt install -y postgresql postgresql-contrib
+```
+
+```
+sudo systemctl enable --now postgresql
+```
+
+```
+sudo systemctl status postgresql
+```
+
+Create three new users:
+    - Metabase ---> metabase
+    - erp next warehouse ---> erpnext_wh
+    - Apache Airflow ----> airflow_user
+
+
+Create the data warehouse user
+```
+CREATE USER dw_user WITH PASSWORD 'xxxxxxxxxxx';
+```
+
+Create erpnext_dw with dw_use as the owner
+```
+sudo -u postgres createdb owner --dw_user erpnext_dw
 ```
 
