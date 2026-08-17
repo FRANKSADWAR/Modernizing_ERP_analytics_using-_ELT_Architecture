@@ -43,8 +43,11 @@ sudo systemctl status postgresql
 ```
 
 Create three new users:
+
     - Metabase ---> metabase
+
     - erp next warehouse ---> erpnext_wh
+    
     - Apache Airflow ----> airflow_user
 
 
