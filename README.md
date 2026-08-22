@@ -14,6 +14,8 @@ effectively without affecting the OLAP functions.
 ## Architecture Overview
 ![Architecture-diagram](images/Architecture_diagram.jpg)
 
+Our architecture has changed from installing every piece of software in one cloud storage to
+splitting object storage and the PostgreSQL datawarehouse
 
 ## Project setup
 #### Prerequisites
