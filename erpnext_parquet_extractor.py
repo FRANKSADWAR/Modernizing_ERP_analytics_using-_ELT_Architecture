@@ -99,7 +99,7 @@ def _iter_chunks(
     engine: Engine,
     query: str,
     params: Optional[dict] = None,
-    chunksize: int = 50_000,
+    chunksize: int = 50000,
 ) -> Iterator[pd.DataFrame]:
     """Yield DataFrame chunks from a SQL query without loading it all into memory."""
     with engine.connect().execution_options(stream_results=True) as conn:
