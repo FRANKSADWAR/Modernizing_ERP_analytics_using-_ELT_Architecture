@@ -16,7 +16,15 @@ effectively without affecting the OLAP functions.
 
 Our architecture has changed from installing every piece of software in one cloud storage to
 splitting object storage and the PostgreSQL datawarehouse
+### Decisions on this architecture
+This being a first project, the focus is mainly on building the intuition, this includes incremental 
+extraction, watermarking, warehouse modelling and orchestration logic.
 
+Containerization, for example has not been utilized in this version of the project because the development and production parity was not necessary while in one virtual private server.
+
+Airflow3 has also changed especially having it in Docker, so before we get into all that, the objective here is to have this project up and running natively.
+
+Once this pipeline is working and proven, the next stage would be to containerize it
 ## Project setup
 #### Prerequisites
 This architecture has been setup in an Ubuntu 24.04 server, hosted in Contabo VPS [200GB SSD, 12GB RAM], with 250GB Object storage from Contabo.
